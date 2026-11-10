@@ -1,13 +1,8 @@
-// pcodec ("numcodecs.pcodec") decoding for zarrita, through a small
-// WebAssembly build of the pco Rust crate (pcodec.wasm, next to this file).
+// pcodec ("numcodecs.pcodec") decoding for zarrita. See README.md.
 //
-//   import * as zarr from 'zarrita'
-//   import { registerPcodec } from './pcodec.js'
-//   registerPcodec(zarr)                       // before opening arrays
+//   registerPcodec(zarr)      once, before opening arrays
 //
-// Decode only. The chunk is the flattened array in C order, as numcodecs
-// writes it. Data types: int16/32/64, uint16/32/64, float32/64, and float16
-// where the JavaScript engine has Float16Array. pco has no 8-bit types.
+// A chunk is the flattened array in C order, as numcodecs writes it.
 const TYPES = {
   int16: [1, Int16Array], int32: [2, Int32Array], int64: [3, BigInt64Array],
   uint16: [4, Uint16Array], uint32: [5, Uint32Array], uint64: [6, BigUint64Array],

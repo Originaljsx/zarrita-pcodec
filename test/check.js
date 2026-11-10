@@ -26,7 +26,7 @@ export async function check(zarr, store, readFile) {
     ok &&= good
     lines.push(`${name.padEnd(22)} ${String(want.length).padStart(5)} values, ${diff} differ  ${good ? 'OK' : 'FAIL'}`)
   }
-  // part of one inner chunk, the way a viewer reads
+  // part of one inner chunk
   const a = await zarr.open.v3(zarr.root(store).resolve('sharded_int32'), { kind: 'array' })
   const part = await zarr.get(a, [1, zarr.slice(40, 50), null])
   const good = String(part.shape) === '10,48'
