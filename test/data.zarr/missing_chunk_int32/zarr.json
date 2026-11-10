@@ -1,0 +1,37 @@
+{
+  "shape": [
+    2,
+    64,
+    48
+  ],
+  "data_type": "int32",
+  "chunk_grid": {
+    "name": "regular",
+    "configuration": {
+      "chunk_shape": [
+        1,
+        64,
+        48
+      ]
+    }
+  },
+  "chunk_key_encoding": {
+    "name": "default",
+    "configuration": {
+      "separator": "/"
+    }
+  },
+  "fill_value": -1,
+  "codecs": [
+    {
+      "name": "numcodecs.pcodec",
+      "configuration": {
+        "level": 8
+      }
+    }
+  ],
+  "attributes": {},
+  "zarr_format": 3,
+  "node_type": "array",
+  "storage_transformers": []
+}

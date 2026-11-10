@@ -1,0 +1,90 @@
+{
+ "sharded_int16": {
+  "dtype": "int16",
+  "shape": [
+   2,
+   64,
+   48
+  ]
+ },
+ "sharded_uint16": {
+  "dtype": "uint16",
+  "shape": [
+   2,
+   64,
+   48
+  ]
+ },
+ "sharded_int32": {
+  "dtype": "int32",
+  "shape": [
+   2,
+   64,
+   48
+  ]
+ },
+ "sharded_uint32": {
+  "dtype": "uint32",
+  "shape": [
+   2,
+   64,
+   48
+  ]
+ },
+ "sharded_int64": {
+  "dtype": "int64",
+  "shape": [
+   2,
+   64,
+   48
+  ]
+ },
+ "sharded_uint64": {
+  "dtype": "uint64",
+  "shape": [
+   2,
+   64,
+   48
+  ]
+ },
+ "sharded_float16": {
+  "dtype": "float16",
+  "shape": [
+   2,
+   64,
+   48
+  ]
+ },
+ "sharded_float32": {
+  "dtype": "float32",
+  "shape": [
+   2,
+   64,
+   48
+  ]
+ },
+ "sharded_float64": {
+  "dtype": "float64",
+  "shape": [
+   2,
+   64,
+   48
+  ]
+ },
+ "plain_float32": {
+  "dtype": "float32",
+  "shape": [
+   2,
+   64,
+   48
+  ]
+ },
+ "missing_chunk_int32": {
+  "dtype": "int32",
+  "shape": [
+   2,
+   64,
+   48
+  ]
+ }
+}

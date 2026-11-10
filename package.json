@@ -1,0 +1,12 @@
+{
+  "name": "zarrita-pcodec",
+  "version": "0.1.0",
+  "description": "pcodec (numcodecs.pcodec) decoding for zarrita, in the browser and Node, through WebAssembly",
+  "type": "module",
+  "main": "pcodec.js",
+  "exports": { ".": "./pcodec.js", "./pcodec.wasm": "./pcodec.wasm" },
+  "files": ["pcodec.js", "pcodec.wasm", "LICENSE", "README.md"],
+  "scripts": { "test": "node test/node.mjs" },
+  "devDependencies": { "zarrita": "0.7.5" },
+  "license": "Apache-2.0"
+}

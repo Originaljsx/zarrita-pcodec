@@ -1,0 +1,19 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>zarrita-pcodec: browser test</title>
+<pre id="out">running…</pre>
+<!-- Serve the repository root with a server that supports HTTP Range requests
+     (sharded arrays need them), then open /test/browser.html -->
+<script type="module">
+import * as zarr from 'https://esm.sh/zarrita@0.7.5'
+import { check } from './check.js'
+const here = new URL('./', location.href)
+let lines
+try {
+  const store = new zarr.FetchStore(new URL('data.zarr', here).href)
+  const file = async (name) => (await fetch(new URL('expected/' + name, here))).arrayBuffer()
+  ;({ lines } = await check(zarr, store, file))
+} catch (err) { lines = ['ERROR ' + (err.stack ?? err)] }
+document.getElementById('out').textContent = lines.join('\n')
+window.__done = true
+</script>

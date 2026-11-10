@@ -1,0 +1,20 @@
+[package]
+name = "pco_decode"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "pcodec (pco standalone format) decoder as a small WebAssembly module with a plain C ABI"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+pco = "=1.1.0"
+half = "2"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
